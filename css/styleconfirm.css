@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+html,
+body{
+  height: 98%;
+  font-family: 'Poppins' sans-serif;
+}
+
+
+.main-container {
+height: 100%;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.container {
+background-color: #CCCCCC;
+width: 41%;
+height: 90%;
+display: flex;
+flex-direction: column;
+border: solid;
+border-color: black;
+
+}
+
+.container1{
+  background-color: white;
+  width: 95%;
+  height:10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+
+}
+
+.fa-long-arrow-left{
+  font-size: 1.3em;
+}
+.c1-item.s{
+  color: rgb(97, 97, 244);
+}
+
+
+
+.c1-item, .c2-item,.c3-item{
+  font-size: 1.5em;
+}
+
+.heading{
+  margin-right:40%;
+}
+
+.float-right{
+  float: right;
+}
+
+.container2{
+  width: 100%;
+  height: 20%;
+  background-image: linear-gradient(to bottom right,#FF0101,#ff8080);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+.fa-thumbs-up{
+  color: white;
+}
+
+.container3{
+  background-color: white;
+  width: 95%;
+  height: 30%;
+  border-bottom : solid;
+  border-color: black;
+  border-width: thin;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+.amb-icon{
+  width:15%;
+
+}
+
+.amb-details{
+  width: 35%;
+  margin-left: 0px;
+  font-size: 1.3em;
+  border-right: solid;
+  border-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.rating{
+  width:100%;
+  display: flex;
+  margin-top: 7%;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 5%
+}
+
+.rating-block{
+  width:90px;
+  height: 35px;
+  font-size: 0.8em;
+  background-color: red;
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+}
+
+.star-icon{
+  color:gold;
+  font-size:0.8em;
+  margin-right: 10%;
+}
+
+.driver{
+  width:50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.driver-details{
+  font-size: 0.8em;
+}
+
+.bold{
+  font-weight:  bold;
+}
+
+.user-icon{
+  font-size: 1.5em;
+}
+
+.container4{
+  background-color: white;
+  width: 90%;
+  height: 37.5%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.traveller-details{
+  width: 50%;
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+}
+
+.progress {
+  width: 50%;
+  height: 80%;
+  text-align: center;
+  padding-top: 5%;
+}
+.progress .circle-hos, .progress .circle-user{
+  display: block;
+  background: #8bc435;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 1px solid #d5d5da;
+}
+.progress .circle-user{
+  background: red;
+}
+.progress .bar {
+  display: block;
+  background: #eee;
+  position: relative;
+  width: 6px;
+  height: 50%;
+  margin: 0 0px 0px 7px;
+  border-radius: 0;
+  border: 1px solid #d5d5da;
+  top:0;
+  left:0;
+}
+.progress .circle .label {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 32px;
+  margin-top: 3px;
+  color: #b5b5ba;
+  font-size: 17px;
+}
+.progress .circle-hos .title, .progress .circle-user .title {
+  color: black;
+  font-size: 1em;;
+  padding-left: 55px;
+  display: block;
+  text-align:left;
+}

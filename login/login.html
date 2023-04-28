@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" id="name"/>
+			<input type="email" placeholder="Email" id="email"/>
+			<input type="password" placeholder="Password" id="password"/>
+			<button onclick="SignUp()">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Log in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input type="email" placeholder="Email" id="lname"/>
+			<input type="password" placeholder="Password" id="lpassword"/>
+			<button onclick="Login()">Log In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>BOOK AN AMBULANCE</h1>
+				<p>To continue with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Log In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Start journey with us</h1>
+				<p></p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+      <script src="main.js"></script>
+	  <script>
+		function SignUp(){
+		var name =  document.getElementById("name").value;
+		var email =  document.getElementById("email").value;
+		var password =  document.getElementById("password").value;
+		fetch(`http://127.0.0.1:8000/register/name=${name}&email=${email}&password=${password}`)
+		.then(response=>response.json())
+		.then(data=>window.location.href = '../index.html')
+		
+		}
+		function Login(){
+		var email =  document.getElementById("lname").value;
+		var password =  document.getElementById("lpassword").value;
+		fetch(`http://127.0.0.1:8000/login/email=${email}&password=${password}`)
+		.then(response=>response.json())
+		.then(data=>window.location.href = '../index.html')
+		}
+		
+	  </script>
+</body>
+</html>

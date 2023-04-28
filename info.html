@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <html>
+    <head>
+    <script src="https://kit.fontawesome.com/de9d45e1c6.js" crossorigin="anonymous"></script>
+    <meta http-equiv="content-type">
+    <link rel="stylesheet" href="mapliststyle.css">
+    <title>Hospital</title>
+    </head>
+    <body>
+    <div class="twoparts">
+        <div class="container">
+            <div class="containerhead">
+                <label for="Search" class="label1">Choose a Hospital</label>
+                    <form action="" class="searchbar">
+                    <input type="text" id="myinput" placeholder="Search Nearby Hospitals....." onkeyup="searchFun()">
+                    </form>
+                <label for="mention" class="label2">Nearby Hospitals</label>
+            </div>
+    <table  id="mytable">
+    <tr onclick=window.location='confirmation.html';><td class='hfn'>ESIC Hospital<td><td>0</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Akurli Maternity Home<td><td>0</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Sai Baba Maternity and Nursing Home<td><td>1</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Shreeji Hospital<td><td>1</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Jeevan Jyoti Hospital<td><td>1</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Sai Siddhi Hospital<td><td>1</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Medha Maternity and Nursing Hospital<td><td>1</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>BMC Hospital<td><td>1</td></tr>
+    </table>
+    <div class="button">
+        <a type="button" onclick=window.location='confirmation.html' class="btn">BOOK AMBULANCE</a>
+    </div>    
+        </div>
+        <div class = container2>
+            <iframe src="hos1map.html" width="1700px" height="900" >
+        </iframe>
+        </div>
+
+        </div>
+        <script>
+            const searchFun = () => {
+                let filter = document.getElementById('myinput').value.toUpperCase();
+
+                let myTable = document.getElementById('mytable');
+
+                let tr = myTable.getElementsByTagName('tr');
+
+                for (var i = 0; i < tr.length; i++) {
+                    let td = tr[i].getElementsByTagName('td')[0];
+
+                    if (td) {
+                        let textvalue = td.textContent || td.innerHTML;
+
+                        if (textvalue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        }
+                        else 
+                        {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+            </script>
+            <script>
+             $("tr").click
+             (
+             window.location = "confirmation.html"
+             );
+            </script>
+    </body>
+    </html>
+    
