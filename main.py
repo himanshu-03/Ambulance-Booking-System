@@ -21,12 +21,12 @@ def register(name:str,email:str,password:str):
     else:
         return False
 
-@app.get('/login/name={name}&password={password}')
-def login(name:str,password:str):
+@app.get('/login/email={email}&password={password}')
+def login(email:str,password:str):
     client = pymongo.MongoClient("mongodb+srv://hiimanshu:himanshu@fastlance.fmvuepr.mongodb.net/test")
     mydb = client["ambulance"]
     mycol = mydb["userlogin"]
-    user = mycol.find_one({'Name':f"{name}","Password":f"{password}"})
+    user = mycol.find_one({'Email':f"{email}","Password":f"{password}"})
     if user:
         return True
     else:
